@@ -4,7 +4,7 @@ require('isomorphic-fetch');
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     let missionTargetText = document.getElementById("missionTarget");
     missionTargetText.innerHTML = `
-                 <h2>Mission Destination:</h2>
+                 <h2>Mission Destination</h2>
                  <ol>
                      <li>Name: ${name}</li>
                      <li>Diameter: ${diameter}</li>
@@ -68,19 +68,19 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         launchStatusText.style.color = "green";
         launchStatusText.innerHTML = `Shuttle is Ready For Launch`
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;        
-        copilotStatus.innerHTML = `Copilot ${copilot} is ready for launch`;        
+        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;        
         if (fuelLevel > 10000) {
             fuelStatus.innerHTML = `Fuel level high enough for launch`;
         } else {
-            launchStatusText.style.color = "red";
-            launchStatusText.innerHTML = `Shuttle Not Ready For Launch`
+            launchStatusText.style.color = 'rgb(199, 37, 78)';
+            launchStatusText.innerHTML = `Shuttle Not Ready for Launch`
             fuelStatus.innerHTML = `Fuel level too low for launch`;
         }
         if (cargoLevel < 10000) {
-            cargoStatus.innerHTML = `Cargo mass good for launch`;
+            cargoStatus.innerHTML = `Cargo mass low enough for launch`;
         } else {
-            launchStatusText.style.color = "red";
-            launchStatusText.innerHTML = `Shuttle Not Ready For Launch`
+            launchStatusText.style.color = 'rgb(199, 37, 78)';
+            launchStatusText.innerHTML = `Shuttle Not Ready for Launch`
             cargoStatus.innerHTML = `Cargo mass too heavy for launch`;
         }
     }
