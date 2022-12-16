@@ -60,23 +60,25 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     //
     if (emptyChecker === true) {
         window.alert("All fields require user input.");
+        list.style.visibility = "hidden";
     } else if ((pilotChecker === false) || (levelChecker === false)) {
         window.alert("All fields require valid inputs, please check and try again.");
+        list.style.visibility = "hidden";
     } else {
         let launchStatusText = document.getElementById("launchStatus");
         list.style.visibility = "visible";
-        launchStatusText.style.color = "green";
+        launchStatusText.style.color = 'rgb(65, 159, 106)';
         launchStatusText.innerHTML = `Shuttle is Ready For Launch`
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;        
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;        
-        if (fuelLevel > 10000) {
+        if (fuelLevel >= 10000) {
             fuelStatus.innerHTML = `Fuel level high enough for launch`;
         } else {
             launchStatusText.style.color = 'rgb(199, 37, 78)';
             launchStatusText.innerHTML = `Shuttle Not Ready for Launch`
             fuelStatus.innerHTML = `Fuel level too low for launch`;
         }
-        if (cargoLevel < 10000) {
+        if (cargoLevel <= 10000) {
             cargoStatus.innerHTML = `Cargo mass low enough for launch`;
         } else {
             launchStatusText.style.color = 'rgb(199, 37, 78)';
