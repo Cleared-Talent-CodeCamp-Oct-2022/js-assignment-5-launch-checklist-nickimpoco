@@ -68,7 +68,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         let launchStatusText = document.getElementById("launchStatus");
         list.style.visibility = "visible";
         launchStatusText.style.color = 'rgb(65, 159, 106)';
-        launchStatusText.innerHTML = `Shuttle is Ready For Launch`
+        launchStatusText.innerHTML = `Shuttle is Ready for Launch`
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;        
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;        
         if (fuelLevel >= 10000) {
