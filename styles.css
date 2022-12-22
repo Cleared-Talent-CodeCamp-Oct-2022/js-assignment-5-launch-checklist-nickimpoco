@@ -7,7 +7,7 @@ div {
 }
 
 #faultyItems {
-   visibility: hidden;   
+   visibility: hidden;
 }
 
 #launchForm {
@@ -16,7 +16,7 @@ div {
    margin: auto;
    width: 25%;
    border: 3px solid black;
-   padding: 10px;
+   padding: 10px;   
 }
 
 #launchStatusCheck {
